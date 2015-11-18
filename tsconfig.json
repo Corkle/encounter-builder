@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"target": "ES5",
+		"module": "commonjs",
+		"outFile": "assets/js/ng-scripts.js"
+	},
+	"exclude": [
+		"node_modules"
+	]
+}

@@ -1,0 +1,2 @@
+angular.module("templates", []).run(["$templateCache", function($templateCache) {$templateCache.put("components/partial1.html","<div>1</div>");
+$templateCache.put("components/home/home.html","<div>Home</div><p>Home P</p>");}]);
