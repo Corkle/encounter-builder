@@ -28,8 +28,8 @@ var paths = {
 * Start server and watch for file changes
 *********************************************/
 gulp.task('default', ['connect:dev'], function () {
-	plugins.watch(paths.htmlPartials, ['create-template-cache']);
-	plugins.watch(paths.tsFiles, ['compile:ts']);
+	plugins.watch(paths.htmlPartials, function() { gulp.start(['create-template-cache']); });
+	plugins.watch(paths.tsFiles, function() { gulp.start(['compile:ts']); });
 	gulp.watch(paths.indexFilePath + paths.indexFileName, ['reload']);
 	gulp.watch(paths.styles, ['reload']);
 });
